@@ -8,9 +8,9 @@ export const ZX7Speaker = () => {
   if (!product) return null;
 
   const backgroundImage = {
-    mobile: '/assets/home/mobile/image-speaker-zx7.jpg',
-    tablet: '/assets/home/tablet/image-speaker-zx7.jpg',
-    desktop: '/assets/home/desktop/image-speaker-zx7.jpg'
+    mobile: import.meta.env.BASE_URL + '/assets/home/mobile/image-speaker-zx7.jpg',
+    tablet: import.meta.env.BASE_URL + '/assets/home/tablet/image-speaker-zx7.jpg',
+    desktop: import.meta.env.BASE_URL + '/assets/home/desktop/image-speaker-zx7.jpg'
   };
 
   return (
