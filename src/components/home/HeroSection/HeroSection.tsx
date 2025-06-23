@@ -11,10 +11,10 @@ export const HeroSection = () => {
       {/* Background image that shows on all screen sizes */}
       <div className="absolute inset-0">
         <picture>
-          <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.jpg" />
-          <source media="(min-width: 768px)" srcSet="/assets/home/tablet/image-header.jpg" />
+          <source media="(min-width: 1024px)" srcSet={import.meta.env.BASE_URL + "/assets/home/desktop/image-hero.jpg"} />
+          <source media="(min-width: 768px)" srcSet={import.meta.env.BASE_URL + "/assets/home/tablet/image-header.jpg"} />
           <img 
-            src="/assets/home/mobile/image-header.jpg" 
+            src={import.meta.env.BASE_URL + "/assets/home/mobile/image-header.jpg"}
             alt="XX99 Mark II Headphones"
             className="w-full h-full object-cover object-center"
           />

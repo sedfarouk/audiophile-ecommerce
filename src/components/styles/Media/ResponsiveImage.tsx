@@ -76,10 +76,10 @@ export const ResponsiveImage = ({
       )}
       
       <picture>
-        <source media="(min-width: 1024px)" srcSet={fixedImage.desktop} />
-        <source media="(min-width: 768px)" srcSet={fixedImage.tablet} />
+        <source media="(min-width: 1024px)" srcSet={import.meta.env.BASE_URL + fixedImage.desktop} />
+        <source media="(min-width: 768px)" srcSet={import.meta.env.BASE_URL + fixedImage.tablet} />
         <img
-          src={fixedImage.mobile}
+          src={import.meta.env.BASE_URL + fixedImage.mobile}
           alt={alt}
           className={`w-full h-auto ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           loading={priority ? 'eager' : 'lazy'}

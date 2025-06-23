@@ -2,9 +2,9 @@ import { Container, Section, Heading, Text } from '../../styles';
 
 export const AboutSection = () => {
   const aboutImage = {
-    mobile: '/assets/shared/mobile/image-best-gear.jpg',
-    tablet: '/assets/shared/tablet/image-best-gear.jpg',
-    desktop: '/assets/shared/desktop/image-best-gear.jpg'
+    mobile: import.meta.env.BASE_URL + '/assets/shared/mobile/image-best-gear.jpg',
+    tablet: import.meta.env.BASE_URL + '/assets/shared/tablet/image-best-gear.jpg',
+    desktop: import.meta.env.BASE_URL + '/assets/shared/desktop/image-best-gear.jpg'
   };
 
   return (

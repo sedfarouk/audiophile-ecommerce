@@ -9,7 +9,7 @@ export const ProductGallery = ({ product }: ProductGalleryProps) => {
   // Get the bundled gallery image based on product category
   const getBundledGalleryImage = () => {
     // We need to use the category (headphones, speakers, earphones) for the bundled gallery image
-    return `/assets/${product.category}-gallery.png`;
+    return import.meta.env.BASE_URL + `/assets/${product.category}-gallery.png`;
   };
   
   // Generate a placeholder SVG if the image fails to load
