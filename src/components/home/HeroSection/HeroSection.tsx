@@ -40,7 +40,7 @@ export const HeroSection = () => {
             
             <Button 
               variant="primary"
-              onClick={() => window.location.href = `/product/${heroProduct.slug}`}
+              onClick={() => window.location.href = ` /audiophile-ecommerce/product/${heroProduct.slug}`}
             >
               See Product
             </Button>
