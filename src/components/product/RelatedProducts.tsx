@@ -32,7 +32,7 @@ export const RelatedProducts = ({ products }: RelatedProductsProps) => {
               {/* Image container with fixed height */}
               <div className="bg-audiophile-white-light rounded-lg p-6 mb-6 w-full h-60 flex items-center justify-center">
                 <img
-                  src={product.image.desktop.replace('./', '/')}
+                  src={import.meta.env.BASE_URL + product.image.desktop.replace('./', '/')}
                   alt={product.name}
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => { e.currentTarget.src = generatePlaceholder(product.name); }}
