@@ -47,9 +47,9 @@ export const ResponsiveImage = ({
   // Fix paths to be absolute
   const fixImagePaths = (imagePaths: ResponsiveImageType): ResponsiveImageType => {
     return {
-      mobile: imagePaths.mobile.replace('./', '/'),
-      tablet: imagePaths.tablet.replace('./', '/'),
-      desktop: imagePaths.desktop.replace('./', '/'),
+      mobile:import.meta.env.BASE_URL + imagePaths.mobile.replace('./', '/'),
+      tablet: import.meta.env.BASE_URL + imagePaths.tablet.replace('./', '/'),
+      desktop: import.meta.env.BASE_URL + imagePaths.desktop.replace('./', '/'),
     };
   };
   
@@ -76,10 +76,10 @@ export const ResponsiveImage = ({
       )}
       
       <picture>
-        <source media="(min-width: 1024px)" srcSet={import.meta.env.BASE_URL + fixedImage.desktop} />
-        <source media="(min-width: 768px)" srcSet={import.meta.env.BASE_URL + fixedImage.tablet} />
+        <source media="(min-width: 1024px)" srcSet={fixedImage.desktop} />
+        <source media="(min-width: 768px)" srcSet={fixedImage.tablet} />
         <img
-          src={import.meta.env.BASE_URL + fixedImage.mobile}
+          src={fixedImage.mobile}
           alt={alt}
           className={`w-full h-auto ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           loading={priority ? 'eager' : 'lazy'}

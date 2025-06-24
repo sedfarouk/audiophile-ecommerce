@@ -2,9 +2,9 @@ import { Container, Section, Heading, Text } from '../../styles';
 
 export const AboutSection = () => {
   const aboutImage = {
-    mobile: import.meta.env.BASE_URL + '/assets/shared/mobile/image-best-gear.jpg',
-    tablet: import.meta.env.BASE_URL + '/assets/shared/tablet/image-best-gear.jpg',
-    desktop: import.meta.env.BASE_URL + '/assets/shared/desktop/image-best-gear.jpg'
+    mobile: '/assets/shared/mobile/image-best-gear.jpg',
+    tablet: '/assets/shared/tablet/image-best-gear.jpg',
+    desktop: '/assets/shared/desktop/image-best-gear.jpg'
   };
 
   return (
@@ -27,7 +27,7 @@ export const AboutSection = () => {
           <div className="order-1 lg:order-2 bg-audiophile-white-light rounded-lg overflow-hidden">
             <div className="aspect-w-16 aspect-h-9 lg:aspect-h-10">
               <img
-                src={aboutImage.desktop}
+                src={import.meta.env.BASE_URL + aboutImage.desktop}
                 alt="Listening to music"
                 className="w-full h-full object-cover rounded-lg"
                 onError={(e) => {
