@@ -39,11 +39,11 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
       <Container>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Product Image */}
-          <div className="bg-audiophile-white rounded-lg p-8">
+          <div className="bg-audiophile-white h-400px rounded-lg p-8 overflow-hidden">
             <ResponsiveImage
               image={product.image}
               alt={product.name}
-              className="w-full h-auto max-h-[400px] object-contain"
+              className="w-full h-auto object-contain"
               priority
             />
           </div>
